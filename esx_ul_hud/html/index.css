@@ -1,0 +1,147 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --health-color: rgb(187, 0, 19);
+    --armor-color: rgb(123, 123, 123);
+    --food-color: rgb(186, 104, 0);
+    --water-color: rgb(0, 153, 188);
+    --stamina-color: rgb(187, 158, 0);
+    --oxigen-color: rgb(96, 188, 0);
+    --drunk-color: rgb(131, 8, 251);
+}
+
+body {
+    background: none !important;
+}
+
+.container {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.39);
+    
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid white;
+}
+
+.container tr {
+    height: 30px;
+}
+
+.container .info-table .first-row {
+    border-bottom: 3px solid white;
+}
+
+.container .info-table .third-row {
+    border-bottom: 3px solid white;
+}
+
+
+.container .info-table .icon {
+    color: rgb(22, 22, 22);
+    text-align: center;
+    font-size: 20px;
+    width: 30px;
+    line-height: 30px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.container .info-table .big-collumn {
+    font-size: 20px;
+    color: rgb(22, 22, 22);
+    text-align: center;
+    line-height: 30px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+.container .bars-table .halfcell {
+    position: relative;
+    line-height: 30px;
+    width: 125px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+.container table .health-bar {
+    background-color: var(--health-color);
+    height: 30px;
+    width: 100%;  
+}
+
+.container table .shield-bar {
+    background-color: var(--armor-color);
+    height: 30px;
+    width: 100%;  
+}
+
+.container table .food-bar {
+    background-color: var(--food-color);
+    height: 30px;
+    width: 70%;  
+}
+
+.container table .water-bar {
+    background-color: var(--water-color);
+    height: 30px;
+    width: 60%;  
+}
+
+.container table .stamina-bar {
+    background-color: var(--stamina-color);
+    height: 30px;
+    width: 100%;  
+}
+
+.container table .oxigen-bar {
+    background-color: var(--oxigen-color);
+    height: 30px;
+    width: 30%;  
+}
+
+.container .drunk-row .drunk-bar {
+    background-color: var(--drunk-color);
+    height: 30px;
+    width: 10%;  
+}
+
+.container .drunk-row .bar-icons {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container table .bar-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .drunk-row {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 246px;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid white;
+    display: none;
+}
