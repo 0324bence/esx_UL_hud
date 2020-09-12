@@ -1,3 +1,10 @@
+.container {
+    /*
+    top: 5px;
+    left: 5px;
+    */
+}
+
 :root {
     margin: 0;
     padding: 0;
@@ -8,6 +15,9 @@
     --stamina-color: rgb(187, 158, 0);
     --oxigen-color: rgb(96, 188, 0);
     --drunk-color: rgb(131, 8, 251);
+    --writing-color: rgb(22, 22, 22);
+    --border-color: white;
+    --bar-icon-color: white;
 }
 
 body {
@@ -16,18 +26,15 @@ body {
 
 .container {
     position: absolute;
-    left: 5px;
-    top: 5px;
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.39);
-    
+    background-color: rgba(255, 255, 255, 0.39);  
 }
 
 .container table {
     width: 100%;
     border-collapse: collapse;
     font-family: 'Roboto', sans-serif;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
 }
 
 .container tr {
@@ -35,31 +42,31 @@ body {
 }
 
 .container .info-table .first-row {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid var(--border-color);
 }
 
 .container .info-table .third-row {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid var(--border-color);
 }
 
 
 .container .info-table .icon {
-    color: rgb(22, 22, 22);
+    color: var(--writing-color);
     text-align: center;
     font-size: 20px;
     width: 30px;
     line-height: 30px;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    border-right: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .container .info-table .big-collumn {
     font-size: 20px;
-    color: rgb(22, 22, 22);
+    color: var(--writing-color);
     text-align: center;
     line-height: 30px;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
+    border-left: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
 }
 
 
@@ -67,13 +74,13 @@ body {
     position: relative;
     line-height: 30px;
     width: 125px;
-    color: white;
+    color: var(--bar-icon-color);
     font-size: 20px;
     text-align: center;
     padding: 0;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    border-left: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
 }
 
 
@@ -92,13 +99,13 @@ body {
 .container table .food-bar {
     background-color: var(--food-color);
     height: 30px;
-    width: 70%;  
+    width: 100%;  
 }
 
 .container table .water-bar {
     background-color: var(--water-color);
     height: 30px;
-    width: 60%;  
+    width: 100%;  
 }
 
 .container table .stamina-bar {
@@ -110,13 +117,13 @@ body {
 .container table .oxigen-bar {
     background-color: var(--oxigen-color);
     height: 30px;
-    width: 30%;  
+    width: 100%;  
 }
 
 .container .drunk-row .drunk-bar {
     background-color: var(--drunk-color);
     height: 30px;
-    width: 10%;  
+    width: 0%;  
 }
 
 .container .drunk-row .bar-icons {
@@ -139,9 +146,45 @@ body {
     left: 0;
     width: 246px;
     height: 30px;
-    color: white;
+    color: var(--bar-icon-color);
     line-height: 30px;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     display: none;
+}
+
+
+
+.container .money-table .money-row .money {
+    position: relative;
+    color: var(--writing-color);
+    width: 83px;
+    max-width: 83px;
+    border-right: 2px solid var(--border-color);
+    text-align: right;
+}
+
+.container .money-table .money-row .money .icon {
+    font-size: 10px;
+    position: absolute;
+    bottom: 8px;
+    left: 2px;
+}
+
+.container .money-table .money-row .money .numbers {
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.fa-money-check {
+    transform: rotate(90deg);
+}
+
+.fa-money-bill-wave {
+    transform: rotate(90deg);
 }

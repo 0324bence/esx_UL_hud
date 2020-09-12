@@ -87,6 +87,22 @@ Citizen.CreateThread(function()
     end
 end)
 
+--Money updates
+Citizen.CreateThread(function()
+    Citizen.Wait(1000)
+    while true do
+        ESX.TriggerServerCallback("ul-hud:money", function(money)
+            SendNUIMessage({
+                action = 'money',
+                cash = money.cash,
+                bank = money.bank,
+                black = money.black
+            })
+        end)
+        Citizen.Wait(1000)
+    end
+end)
+
 --Status Updates
 Citizen.CreateThread(function()
     while true do
